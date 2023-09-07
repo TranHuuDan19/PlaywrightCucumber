@@ -4,8 +4,11 @@ import  {expect}  from "@playwright/test"
 Then(
     /^The "([^"]*)" should contain the text "([^"]*)"$/,
     async function (elementKey: string, expectedElementText: string){
+        const {
+            screen: { page },
+        } = this;
         console.log(`The ${elementKey} should contain the text ${expectedElementText}`);
-        const content = await global.page.textContent("[data-id='contacts']");
+        const content = await page.textContent("[data-id='contacts']");
         expect(content).toBe(expectedElementText);
     }
 )
@@ -13,8 +16,11 @@ Then(
 Then (
     /^The "([^"]*)" should be displayed$/,
     async function(elementKey: string){
+        const {
+            screen: { page },
+        } = this;
         console.log(`the ${elementKey} should be displayed`);
-        const  locator = await global.page.locator("[class='testing-talks-logo']");
+        const  locator = await page.locator("[class='testing-talks-logo']");
         await expect(locator).toBeVisible();
     }
 )
