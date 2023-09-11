@@ -4,22 +4,19 @@ import { getElementLocator } from '../../support/web-element-helper'
 import { ScenarioWorld } from "../setUp/world";
 import { waitFor} from "../../support/wait-for-behavior"
 
-Then (
-    /^The "([^"]*)" should be displayed$/,
-    async function(elementKey: ElementKey){
+Then(
+    /^The "([^"]*)" should contain the text "([^"]*)"$/,
+    async function (this: ScenarioWorld, elementKey: ElementKey, expectedElementText: string){
         const {
-            screen: { page },
+            screen:{ page },
             globalConfig,
         } = this;
-        console.log(`the ${elementKey} should be displayed`);
-
+        console.log(`The ${elementKey} should contain the text ${expectedElementText}`);
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
-        const locator = page.locator(elementIdentifier);
 
         await waitFor( async () => {
-            let isElementVisible: boolean;
-            isElementVisible = (await page.$(elementIdentifier)) != null;
-            return isElementVisible;
-        });
+            const elementText = await page.textContent(elementIdentifier);
+            return elementText?.includes(expectedElementText);
+        })
     }
 )

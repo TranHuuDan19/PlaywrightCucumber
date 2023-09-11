@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "as-a-user-i-expect-to-be-able-to-navigate-to-the-home-page;as-a-user-i-expect-to-be-able-to-see-contacts",
+        "id": "as-a-user-i-expect-to-be-able-to-create-contact;as-a-user-i-expect-to-be-able-to-create-a-new-contact",
         "keyword": "Scenario",
         "line": 6,
-        "name": "As a user I expect to be able to see contacts",
+        "name": "As a user I expect to be able to create a new contact",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 541054000
+              "duration": 1189114292
             }
           },
           {
@@ -23,37 +23,258 @@
             "line": 7,
             "name": "I am on the \"home\" page",
             "match": {
-              "location": "src/step-definitions/navigation.ts:14"
+              "location": "src/step-definitions/navigation.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 363960541
+              "duration": 446450832
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "The \"header logo\" should be displayed",
+            "name": "I click the \"create\" button",
             "match": {
-              "location": "src/step-definitions/assertions/verify-element-visibility.ts:24"
+              "location": "src/step-definitions/click.ts:10"
             },
             "result": {
               "status": "passed",
-              "duration": 18790458
+              "duration": 110501207
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 9,
-            "name": "The \"contacts header\" should contain the text \"Contacts\"",
+            "name": "I am directed to the \"create contact\" page",
             "match": {
-              "location": "src/step-definitions/assertions/verify-element-visibility.ts:15"
+              "location": "src/step-definitions/navigation.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 3267083
+              "duration": 282250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "The \"create contact header\" should contain the text \"Create Contact\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12345082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I fill in the \"name\" input with \"Tran Huu Dan\"",
+            "match": {
+              "location": "src/step-definitions/form.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53750792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I select the \"Male\" option form the \"gender\"",
+            "match": {
+              "location": "src/step-definitions/form.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39375749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I fill in the \"phone\" input with \"11111111\"",
+            "match": {
+              "location": "src/step-definitions/form.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33904667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I fill in the \"street\" input with \"Le Loi\"",
+            "match": {
+              "location": "src/step-definitions/form.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32092707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I fill in the \"city\" input with \"Ho Chi Minh\"",
+            "match": {
+              "location": "src/step-definitions/form.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18383125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click the \"save\" button",
+            "match": {
+              "location": "src/step-definitions/click.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79197834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I am directed to the \"home\" page",
+            "match": {
+              "location": "src/step-definitions/navigation.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I fill in the \"search\" input with \"Tran Huu Dan\"",
+            "match": {
+              "location": "src/step-definitions/form.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18997917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "The \"full name label\" should contain the text \"Name:\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2205375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "The \"name\" should contain the text \"Tran Huu Dan\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1970083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "The \"gender label\" should contain the text \"Gender:\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2540125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "The \"gender\" should contain the text \"Male\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5524083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "The \"address label\" should contain the text \"Address:\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6655833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "The \"address\" should contain the text \"Le Loi\"",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-value.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2003542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "The \"edit\" should be displayed",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-visibility.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5413959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "The \"delete\" should be displayed",
+            "match": {
+              "location": "src/step-definitions/assertions/verify-element-visibility.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7491875
             }
           },
           {
@@ -61,7 +282,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24909958
+              "duration": 99954625
             }
           }
         ],
@@ -82,11 +303,11 @@
         "type": "scenario"
       }
     ],
-    "id": "as-a-user-i-expect-to-be-able-to-navigate-to-the-home-page",
+    "id": "as-a-user-i-expect-to-be-able-to-create-contact",
     "line": 1,
     "keyword": "Feature",
-    "name": "As a user I expect to be able to navigate to the Home page",
+    "name": "As a user I expect to be able to create contact",
     "tags": [],
-    "uri": "src/features/home-page.feature"
+    "uri": "src/features/create-contact.feature"
   }
 ]

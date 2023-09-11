@@ -1,3 +1,11 @@
 {
-  "contacts header" : "[class='contacts']"
+  "contacts header" : "[class='contacts']",
+  "create" : "[class='ContactListAdd']",
+  "search" : "[data-id='search']",
+  "full name label" : "[data-id='full-name-label']",
+  "gender label" : "[data-id='gender-label']",
+  "address label" : "[data-id='address-label']",
+  "address" : "[data-id='address']",
+  "edit" : "[data-id='edit-button']",
+  "delete" : "[data-id='delete-button']"
 }

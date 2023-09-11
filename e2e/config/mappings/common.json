@@ -1,3 +1,9 @@
 {
-  "header logo" : "[class='testing-talks-logo']"
+  "header logo" : "[class='testing-talks-logo']",
+  "gender" : "[data-id='gender']",
+  "name" : "[data-id='name']",
+  "phone" : "[data-id='phone']",
+  "street" : "[data-id='street']",
+  "city" : "[data-id='city']",
+  "save" : "[data-id='save-button']"
 }

@@ -10,45 +10,43 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-(0, _cucumber.Then)(/^The "([^"]*)" should be displayed$/, /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(elementKey) {
-    var page, globalConfig, elementIdentifier, locator;
+(0, _cucumber.Then)(/^The "([^"]*)" should contain the text "([^"]*)"$/, /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(elementKey, expectedElementText) {
+    var page, globalConfig, elementIdentifier;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
           page = this.screen.page, globalConfig = this.globalConfig;
-          console.log("the ".concat(elementKey, " should be displayed"));
+          console.log("The ".concat(elementKey, " should contain the text ").concat(expectedElementText));
           elementIdentifier = (0, _webElementHelper.getElementLocator)(page, elementKey, globalConfig);
-          locator = page.locator(elementIdentifier);
-          _context2.next = 6;
+          _context2.next = 5;
           return (0, _waitForBehavior.waitFor)( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var isElementVisible;
+            var elementText;
             return regeneratorRuntime.wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   _context.next = 2;
-                  return page.$(elementIdentifier);
+                  return page.textContent(elementIdentifier);
 
                 case 2:
-                  _context.t0 = _context.sent;
-                  isElementVisible = _context.t0 != null;
-                  return _context.abrupt("return", isElementVisible);
+                  elementText = _context.sent;
+                  return _context.abrupt("return", elementText === null || elementText === void 0 ? void 0 : elementText.includes(expectedElementText));
 
-                case 5:
+                case 4:
                 case "end":
                   return _context.stop();
               }
             }, _callee);
           })));
 
-        case 6:
+        case 5:
         case "end":
           return _context2.stop();
       }
     }, _callee2, this);
   }));
 
-  return function (_x) {
+  return function (_x, _x2, _x3) {
     return _ref.apply(this, arguments);
   };
 }());
