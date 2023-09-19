@@ -1,6 +1,6 @@
 Feature: As a user I expect to be able to create contact
 
-  @dev
+
   @smoke
   @regression
   Scenario: As a user I expect to be able to create a new contact
@@ -25,7 +25,3 @@ Feature: As a user I expect to be able to create contact
     And The "address" should contain the text "Le Loi"
     And The "edit" should be displayed
     And The "delete" should be displayed
-
-
-
-

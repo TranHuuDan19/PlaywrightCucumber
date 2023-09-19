@@ -5,13 +5,13 @@ import { ScenarioWorld } from "../setUp/world";
 import { waitFor} from "../../support/wait-for-behavior"
 
 Then (
-    /^The "([^"]*)" should be displayed$/,
-    async function(elementKey: ElementKey){
+    /^The "([^"]*)" should( not)? be displayed$/,
+    async function(elementKey: ElementKey, negate: boolean){
         const {
             screen: { page },
             globalConfig,
         } = this;
-        console.log(`the ${elementKey} should be displayed`);
+        console.log(`the ${elementKey} should ${negate?'not':''}be displayed`);
 
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
         const locator = page.locator(elementIdentifier);
@@ -19,7 +19,7 @@ Then (
         await waitFor( async () => {
             let isElementVisible: boolean;
             isElementVisible = (await page.$(elementIdentifier)) != null;
-            return isElementVisible;
+            return isElementVisible === !negate ;
         });
     }
 )
